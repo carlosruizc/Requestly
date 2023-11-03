@@ -1,0 +1,465 @@
+/* BEM Methodology for naming */
+/* Reset some default styles */
+body, h1, h2, h3, h4, h5, h6, p  {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    display: flex;
+    font-family: "Open Sans", Helvetica, Roboto, Arial, sans-serif;
+    font-size: 20px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    margin-top:1em;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 1.25em;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    font-size: 0.625rem;;
+}
+
+/* Global button styles */
+
+button {
+    background-color: #2196F3;
+    color: white;
+    padding: 0.5em;
+    border: 1px solid #2196F3;
+    border-radius: 0.25em;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    font-family: inherit;
+}
+
+button:hover {
+    opacity: 0.5;
+}
+
+/* Card styles */
+.card {
+    display: flex;
+    flex-direction: row;;
+    min-width: 95vw;
+    background-color: white;
+    border-radius: 0.25em;
+    box-shadow: 0 0.05em 0.25em 0 grey;
+}
+
+/* Image container styles */
+.card__image-container {
+    display: flex;
+    width: 45%;
+    background-image: url("https://www.msccruisesusa.com/-/media/global-b2c-contents/cruise-results/destinations/mediterranean/fyc_med_14.jpg?bc=transparent&as=1&dmc=0&iar=0&mh=900&mw=3180&sc=0&thn=0&udi=0&hash=4B5A0B17B2B6D3D812E48BE90A6B6B9A") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 0.25em;
+    border-top-left-radius: 0.25em;
+    background-position-x: right;
+}
+
+.card__button-merchandizing-blue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2em;
+    font-size: 0.6rem;
+    margin: 1em 0.5em 1em 0.5em;
+    padding: 0 0.8em 0 0.8em;
+    background-color: #040033;
+    border-radius: 1em;
+}
+
+.card__button-merchandizing-white {
+    display: none;
+}
+
+.card__image-container img {
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 0.25em;
+    border-bottom-left-radius: 0.25em;
+}
+
+/* Cruise information styles */
+.card__cruise-info {
+    display: flex;
+    flex-direction: column;
+    padding: 0.3em 0.625em 0.3em 0.625em;
+    width: 55%;
+}
+
+#first-separator {
+    display: none;
+}
+
+#second-separator {    
+    width: 100%;
+    background-color: lightgray;
+    margin: 2px 0 0 0
+}
+
+.card__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0.25em 0;
+}
+
+.card__title h4 {
+    margin: 0;
+}
+
+.card__title img {
+    height: 1.25em;
+    object-fit: cover;
+}
+
+.card__ship-info {
+    display: flex;
+    flex-direction: row;
+    margin: 0.25em 0;
+}
+
+.card__cruise-info h5 {
+    margin: 0;
+}
+
+.card__cruise-info h6 {
+    font-weight: 400;
+    margin: 0.25em 0;
+}
+
+.card__cruise-info h6:nth-child(4) {
+    display: flex;
+}
+
+.card__cruise-info h6:nth-child(5) {
+    display: none;
+}
+
+.card__info-mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0.25em 0;
+}
+
+.card__info-mobile img {
+    height: 1.25em;
+    object-fit: cover;
+}
+
+/* Date container styles */
+
+.card__dates {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.1em;
+}
+
+.card__dates p {
+    font-size: 0.5rem;
+    color: lightgray;
+}
+
+.card__dates-divider {    
+    margin: 0.8em 0.25em 0.25em 0.25em;
+    border: lightgray solid 0.5px;
+}
+
+.card__date-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.card__date-container:hover {
+    opacity: 0.5;
+}
+
+.card__icon-container {
+    padding: 0.2em;
+}
+
+.card__date-container--blue {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 4em;
+    margin: 0.3em 0 0.3em 0;
+    background-color: #285dc5;
+    height: 1em;
+    border: #285dc5 solid 0.5px;
+}
+
+.card__date-container--blue h5 {
+    margin: 0;
+    padding: 0.3em 0.4em 0.3em 0.3em;
+    font-size: 0.625rem;;
+    font-weight: 300;
+}
+
+.card__date-container--white {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 3.5em;
+    margin: 0.3em 0.4em 0.3em 0;
+    color: black;
+    background-color: white;
+    height: 1em;
+    border: lightgray solid 0.5px;
+}
+
+.card__available-dates {
+    width: 100%;
+}
+
+.card__date-container--white h5 {
+    margin: 0;
+    padding: 0.2em;
+    font-size: 0.625rem;;
+    font-weight: 300;
+}
+
+.card__options-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.dates-selector {
+    font-family: "Open Sans", Helvetica, Roboto, Arial, sans-serif;
+    font-size: 0.625rem;;
+    font-weight: 300;
+    height: 1em;
+    color: white;
+    padding: 0;
+    border-radius: 0;
+    border: white solid 0.5px;
+}
+
+.dates-selector option {
+    color: black;
+}
+
+.card__date-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 5.5em;
+    margin: 0.3em 0.3em 0.3em 0;
+    color: #285dc5;
+    height: 1em;
+    border: #285dc5 solid 0.5px;
+    cursor: pointer;
+}
+
+.card__date-box h5 {
+    margin: 0;
+    padding: 0.2em;
+    font-size: 0.625rem;
+    font-weight: 300;
+}
+
+/* Bottom section styles */
+.card__bottom-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #285dc5;
+}
+
+.card__info-mobile {
+    display: none;    
+}
+
+.card__info-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0.6em 0.6em 0.6em 0;
+}
+
+.card__info-item p {
+    margin-left: 0.3em;
+    color: #285dc5;
+}
+
+.card__booking-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    margin: 0.2rem 0.5em 0.2em 0.5em;
+}
+
+.card__booking-section p {
+    color: black;
+    text-align: right;
+    font-size: 0.5rem;
+}
+
+.card__price-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__price-section h6 {
+    margin:0;
+    font-size: 0.7rem;
+}
+
+.card__price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.1em 0.5em 0.1em 0.5em;
+}
+
+.card__price-divider {
+    height: 70%;
+    border: lightgray solid 0.5px;
+}
+
+.card__button-orange {
+    border-radius: 0;
+    border: none;
+    color: white;
+    background-color: #f25601;
+    margin: 0.5em 0 0.5em 0.5em;
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        border-radius: 0;
+        height: 95%;
+        width: 95%;
+    }
+    
+    .card__image-container {
+        display: flex;
+        height: 40%;
+        width: 100%;
+        min-height: 10em;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+    }   
+
+    .card__button-merchandizing-blue {
+        display: none;
+    }
+
+    .card__button-merchandizing-white {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 2em;
+        font-size: 0.6rem;
+        margin: 1em 0.5em 1em 0.5em;
+        padding: 0 0.8em 0 0.8em;
+        color: black;
+        background-color: white;
+        border-radius: 1em;
+        border: none;
+    }
+
+    .card__title img {
+        display: none;
+    }
+
+    .card__cruise-info {        
+        width: 95%;
+    }
+
+    .card__cruise-info h6:nth-child(4) {
+        display: none;
+    }
+
+    .card__cruise-info h6:nth-child(5) {
+        display: flex;
+    }
+
+    .card__info-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #285dc5;
+        flex-wrap: wrap;
+    }
+
+    #first-separator {    
+        display: flex;
+        width: 100%;
+        background-color: lightgray;
+        margin: 2px 0 0 0
+    }
+
+    #second-separator {
+        display: none;
+    }
+
+    .card__dates-divider {
+        border: none;
+    }
+
+    .card__price-divider{
+        display: none;
+    }
+
+    .card__bottom-section {
+        justify-content: end;
+    }
+
+    .card__info {
+        display: none; 
+    }
+
+    .card__info-logo {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card__dates {
+        flex-wrap: wrap;
+    }
+
+    .card__price-section {
+        flex-wrap: wrap;
+        justify-content: end;
+    }
+}
