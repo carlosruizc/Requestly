@@ -1,5 +1,5 @@
 const data = [
-    { id: "MA20231124MIAMIA", price: 2 },
+    { id: "MA20240209MIAMIA", price: 400 },
     { id: "MA20231215MIAMIA", price: 1 },
     { id: "MA20231127MIAMIA", price: 1 },
     { id: "MA20231201MIAMIA", price: 1 },
@@ -77,6 +77,7 @@ function updateCardPrice(selectedCard) {
         const currentPriceValue = parseInt(
             currentPriceContent.textContent.trim().match(/\d+/)[0]
         );
+
         if (parseInt(selectedDatePrice) === currentPriceValue) {
             return
         } else if (newPrice < selectedDatePrice) {
@@ -118,6 +119,22 @@ function updateCardPrice(selectedCard) {
             totalDivs[5].style.minWidth = "max-content"
             const newPriceDiv = totalDivs[5].querySelector(".itinerary-card-price__price")
             newPriceDiv.textContent = `$ ${newPrice}`
+        } else if (newPrice > selectedDatePrice) {
+            if (strikethroughText) {
+                totalDivs = currentPriceBox.querySelectorAll("div")
+                currentPriceBox.removeChild(currentPriceBox.querySelector("div"))
+                const firstSpan = currentPriceBox.querySelector("span")
+                const parentDiv = firstSpan.parentElement
+                parentDiv.parentElement.insertBefore(firstSpan, parentDiv)
+                spanElements = currentPriceBox.querySelectorAll("span")
+                spanElements[1].style.minWidth = "max-content"
+                spanElements[1].textContent = `$ ${selectedDatePrice}`
+            } else {
+                totalDivs = currentPriceBox.querySelectorAll("div")
+                const spanElements = currentPriceBox.querySelectorAll("span")
+                spanElements[1].style.minWidth = "max-content"
+                spanElements[1].textContent = `$ ${selectedDatePrice}`
+            }
         } else {
             totalDivs[2].style.minWidth = "max-content"
             const strikethroughPrice = totalDivs[2].querySelector(".itinerary-card-price__price span")
