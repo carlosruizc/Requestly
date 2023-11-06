@@ -196,46 +196,48 @@ button:hover {
 }
 
 .card__icon-container {
-    padding: 0.2em;
+    padding: 0.05em;
 }
 
-.card__date-container--blue {
+.card__date-button--blue {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 4em;
+    width: 6.1em;
     margin: 0.3em 0 0.3em 0;
     background-color: #285dc5;
-    height: 1em;
+    height: 1.5em;
     border: #285dc5 solid 0.5px;
+    border-radius: 0;
 }
 
-.card__date-container--blue h5 {
+.card__date-button--blue h5 {
     margin: 0;
     padding: 0.3em 0.4em 0.3em 0.3em;
     font-size: 0.625rem;;
     font-weight: 300;
 }
 
-.card__date-container--white {
+.card__date-button--white {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 3.5em;
+    width: 5.2em;
     margin: 0.3em 0.4em 0.3em 0;
     color: black;
     background-color: white;
-    height: 1em;
+    height: 1.5em;
     border: lightgray solid 0.5px;
+    border-radius: 0;
 }
 
 .card__available-dates {
     width: 100%;
 }
 
-.card__date-container--white h5 {
+.card__date-button--white h5 {
     margin: 0;
     padding: 0.2em;
     font-size: 0.625rem;;
@@ -265,22 +267,24 @@ button:hover {
     color: black;
 }
 
-.card__date-box {
+.card__more-date-button {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 5.5em;
+    width: 7.2em;
+    height: 1.5em;
     margin: 0.3em 0.3em 0.3em 0;
     color: #285dc5;
-    height: 1em;
+    background-color: white;
     border: #285dc5 solid 0.5px;
+    border-radius: 0;
     cursor: pointer;
 }
 
-.card__date-box h5 {
+.card__more-date-button h5 {
     margin: 0;
-    padding: 0.2em;
+    padding: 0.05em;
     font-size: 0.625rem;
     font-weight: 300;
 }
